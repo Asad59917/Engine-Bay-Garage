@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Engine Bay Garage</title>
+  <link rel="stylesheet" href="ContactPage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Additional styles for form feedback */
+    .form-message {
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 5px;
+      display: none;
+    }
+    .form-message.success {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    .form-message.error {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+    .loading {
+      opacity: 0.7;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logoo.png" alt="Engine Bay Logo">
+                </a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="ContactPage.html"class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="overlay"></div>
+        </div>
+    </header>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2><span>Contact</span> Us</h2>
+    
+    <div class="contact-wrapper">
+      <div class="contact-container">
+        <!-- Contact Info Panel -->
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <p>Say something to start a live chat!</p>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="icon">📞</span>
+              <span>042864567</span>
+            </div>
+            <div class="contact-item">
+              <span class="icon">✉️</span>
+              <span>Enginebay67@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <span class="icon">📍</span>
+              <span>13th street, Rashidiya, Umm-Ramool<br>Dubai, U-A-E</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <div class="form-message" id="formMessage"></div>
+          <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+           
+            <input type="hidden" name="access_key" value="6828cdc6-9ad7-4bf6-8574-e2a8b08fdbe0">
+            
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" name="firstName" placeholder="First Name" required>
+              </div>
+              <div class="form-group">
+                <input type="text" name="lastName" placeholder="Last Name" required>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <input type="email" name="email" placeholder="Email" required>
+              </div>
+              <div class="form-group">
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label class="subject-label">Select Subject?</label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="subject" value="Service Inquiry" checked>
+                  <span class="radio-custom"></span>
+                  Service Inquiry
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="subject" value="Appointment Booking">
+                  <span class="radio-custom"></span>
+                  Appointment Booking
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="subject" value="General Question">
+                  <span class="radio-custom"></span>
+                  General Question
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="subject" value="Quote Request">
+                  <span class="radio-custom"></span>
+                  Quote Request
+                </label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label class="message-label">Message</label>
+              <textarea name="message" placeholder="Write your message.." rows="4" required></textarea>
+            </div>
+            
+            <!-- Web3Forms Configuration -->
+            <input type="hidden" name="_subject" value="New Contact Form Submission - Engine Bay Garage">
+            <input type="hidden" name="from_name" value="Engine Bay Contact Form">
+          
+            
+            <div class="button-wrapper">
+              <button type="submit" id="submitBtn">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/Logofotter.png" alt="Engine Bay Logo">
+                <div class="contact-details">
+                    <p>042567467</p>
+                    <p>Enginebay7@gmail.com</p>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="quick-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                </ul> <!-- Added missing closing </ul> tag -->
+            </div>
+
+            <div class="working-hours">
+                <h4>Working Hours</h4>
+                <div class="hours-list">
+                    <div class="hour-item">
+                        <span>Monday - Thursday</span>
+                        <span>9am - 6pm</span>
+                    </div>
+                    <div class="hour-item">
+                        <span>Friday</span>
+                        <span>off</span>
+                    </div>
+                    <div class="hour-item">
+                        <span>Saturday & Sunday</span>
+                        <span>10am - 6pm</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 Engine Bay garage. All rights reserved</p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        // Form handling with AJAX to prevent redirect
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault(); // Prevent default form submission
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const formMessage = document.getElementById('formMessage');
+            const form = this;
+            
+            // Show loading state
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            form.classList.add('loading');
+            
+            // Hide any previous messages
+            formMessage.style.display = 'none';
+            formMessage.className = 'form-message';
+            
+            try {
+                // Create FormData object
+                const formData = new FormData(form);
+                
+                // Submit form using fetch API
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (response.ok) {
+                    // Success
+                    formMessage.className = 'form-message success';
+                    formMessage.textContent = 'Thank you! Your message has been sent successfully. We will get back to you soon.';
+                    formMessage.style.display = 'block';
+                    
+                    // Reset form
+                    form.reset();
+                    
+                    // Scroll to success message
+                    formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            } catch (error) {
+                // Error
+                formMessage.className = 'form-message error';
+                formMessage.textContent = 'Sorry, there was an error sending your message. Please try again or contact us directly.';
+                formMessage.style.display = 'block';
+                
+                console.error('Error:', error);
+            } finally {
+                // Reset button state
+                submitBtn.textContent = 'Send Message';
+                submitBtn.disabled = false;
+                form.classList.remove('loading');
+            }
+        });
+    </script>
+<script src="script.js"></script>
+</body>
+</html>
